@@ -1,5 +1,6 @@
 export interface Contact {
     id: number,
     title: string,
-    imageUrl: string
+    imageUrl: string,
+    link: string
 }

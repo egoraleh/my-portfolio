@@ -10,25 +10,25 @@ const languages: Language[] = [
         id: 1,
         title: "Русский",
         imageUrl: russiaFlag,
-        level: "Родной язык"
+        level: "Родной язык."
     },
     {
         id: 2,
         title: "Английский",
         imageUrl: ukFlag,
-        level: "Изучаю с начальной школы и по сей день. Уровень B2"
+        level: "Изучаю с начальной школы и по сей день. Уровень B2."
     },
     {
         id: 3,
         title: "Испанский",
         imageUrl: spainFlag,
-        level: "Изучаю в данный момент. Уровень A2-B1"
+        level: "Изучаю в данный момент. Уровень A2-B1."
     },
     {
         id: 4,
         title: "Французский",
         imageUrl: franceFlag,
-        level: "Изучал в старшей школе где-то 4 года. Уровень A2-B1"
+        level: "Изучал в старшей школе где-то 4 года. Уровень A2-B1."
     },
     {
         id: 5,

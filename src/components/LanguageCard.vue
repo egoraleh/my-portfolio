@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Language} from "@/types/language";
+import type { Language } from "@/types/language";
 
 defineProps<{
   language: Language
@@ -8,51 +8,55 @@ defineProps<{
 </script>
 
 <template>
-  <section>
-    <h3>{{ language.title }}</h3>
-    <img :src="language.imageUrl" alt="Флаг" class="flag-wave-clipped">
-    <p>{{ language.level }}</p>
-  </section>
+  <article class="language-card">
+    <figure class="language-card__figure">
+      <img :src="language.imageUrl" :alt="`${language.title} флаг`" class="language-card__image flag-wave-clipped">
+    </figure>
+
+    <section class="language-card__info">
+      <h3 class="language-card__header">{{ language.title }}</h3>
+      <p class="language-card__level">{{ language.level }}</p>
+    </section>
+  </article>
 </template>
 
 <style scoped>
-.flag-wave-clipped {
-  display: inline-block;
-  position: relative;
-  max-width: 150px;
-  animation: wave-clip 4s infinite ease-in-out;
-  clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      0% 100%
-  );
+.language-card {
+  display: flex;
+  align-items: center;
+  background-color: #fffaf0;
+  border-left: 4px solid #ffa726;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  gap: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@keyframes wave-clip {
-  0% {
-    clip-path: polygon(
-        0% 0%,
-        100% 5%,
-        100% 95%,
-        0% 100%
-    );
-  }
-  50% {
-    clip-path: polygon(
-        0% 5%,
-        100% 0%,
-        100% 100%,
-        0% 95%
-    );
-  }
-  100% {
-    clip-path: polygon(
-        0% 0%,
-        100% 5%,
-        100% 95%,
-        0% 100%
-    );
-  }
+.language-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.language-card__header {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.language-card__figure {
+  flex-shrink: 0;
+  margin: 0;
+  position: relative;
+}
+
+.language-card__image {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.language-card__level {
+  font-size: 1.1rem;
+  color: #555;
 }
 </style>

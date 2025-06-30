@@ -4,7 +4,7 @@ import RewardCard from "@/components/RewardCard.vue";
 
 const { getAllRewards } = useRewards();
 const rewards = getAllRewards();
-console.log(rewards.length);
+
 </script>
 
 <template>

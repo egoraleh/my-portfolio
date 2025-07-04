@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useProjects } from "@/composables/useProjects";
-import ProjectCard from "@/components/ProjectCard.vue";
-
-const { getAllProjects } = useProjects();
-const projects = getAllProjects();
-</script>
-
 <template>
   <section class="project-section">
     <h1 class="project-section__header">Проекты</h1>
@@ -16,6 +8,14 @@ const projects = getAllProjects();
     </ul>
   </section>
 </template>
+
+<script setup lang='ts'>
+import { useProjects } from '@/composables/useProjects';
+import ProjectCard from '@/ui/components/cards/ProjectCard.vue';
+
+const { getAllProjects } = useProjects();
+const projects = getAllProjects();
+</script>
 
 <style scoped>
 .project-section {

@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import { useRewards } from "@/composables/useRewards";
-import RewardCard from "@/components/RewardCard.vue";
-
-const { getAllRewards } = useRewards();
-const rewards = getAllRewards();
-
-</script>
-
 <template>
   <section class="reward-section">
     <h1 class="reward-section__header">Достижения</h1>
@@ -17,6 +8,14 @@ const rewards = getAllRewards();
     </ul>
   </section>
 </template>
+
+<script setup lang='ts'>
+import { useRewards } from '@/composables/useRewards';
+import RewardCard from '@/ui/components/cards/RewardCard.vue';
+
+const { getAllRewards } = useRewards();
+const rewards = getAllRewards();
+</script>
 
 <style scoped>
 .reward-section {

@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import { useLanguages } from "@/composables/useLanguages";
-import { useEducations } from "@/composables/useEducations";
-import LanguageCard from "@/components/LanguageCard.vue";
-import EducationCard from "@/components/EducationCard.vue";
-
-const { getAllLanguages } = useLanguages();
-const { getAllEducations } = useEducations();
-const languages = getAllLanguages();
-const educations = getAllEducations();
-</script>
-
 <template>
   <section>
     <section class="info-section">
@@ -41,6 +29,18 @@ const educations = getAllEducations();
 
   </section>
 </template>
+
+<script setup lang='ts'>
+import { useLanguages } from '@/composables/useLanguages';
+import { useEducations } from '@/composables/useEducations';
+import LanguageCard from '@/ui/components/cards/LanguageCard.vue';
+import EducationCard from '@/ui/components/cards/EducationCard.vue';
+
+const { getAllLanguages } = useLanguages();
+const { getAllEducations } = useEducations();
+const languages = getAllLanguages();
+const educations = getAllEducations();
+</script>
 
 <style scoped>
 .info-section {

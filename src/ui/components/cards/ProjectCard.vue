@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import type { Project } from "@/types/project";
-
-defineProps<{
-  project: Project
-}>();
-
-</script>
-
 <template>
   <article class="project-card">
     <h3 class="project-card__header">{{ project.title }}</h3>
@@ -22,6 +13,14 @@ defineProps<{
     </a>
   </article>
 </template>
+
+<script setup lang='ts'>
+import type { Project } from '@/types/project.js';
+
+defineProps<{
+  project: Project
+}>();
+</script>
 
 <style scoped>
 .project-card {

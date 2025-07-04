@@ -1,5 +1,5 @@
-import languages from "@/data/languages.ts";
-import { Language } from "@/types/language.ts";
+import languages from '@/consts/languages.ts';
+import { Language } from '@/types/language.ts';
 
 export function useLanguages() {
     const getAllLanguages = (): Language[] => languages.sort((a: Language, b: Language): number => a.id - b.id);
@@ -9,6 +9,6 @@ export function useLanguages() {
 
     return {
         getAllLanguages,
-        getLanguageById
+        getLanguageById,
     };
 }

@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import type { Reward } from "@/types/reward";
-
-defineProps<{
-  reward: Reward
-}>();
-
-</script>
-
 <template>
   <article class="reward-card">
     <h3 class="reward-card__header">{{ reward.title }}</h3>
@@ -14,6 +5,14 @@ defineProps<{
     <p class="reward-card__year">{{ reward.year }}</p>
   </article>
 </template>
+
+<script setup lang='ts'>
+import type { Reward } from '@/types/reward.js';
+
+defineProps<{
+  reward: Reward
+}>();
+</script>
 
 <style scoped>
 .reward-card {

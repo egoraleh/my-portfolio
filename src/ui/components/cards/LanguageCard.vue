@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import type { Language } from "@/types/language";
-
-defineProps<{
-  language: Language
-}>();
-
-</script>
-
 <template>
   <article class="language-card">
     <figure class="language-card__figure">
@@ -19,6 +10,14 @@ defineProps<{
     </section>
   </article>
 </template>
+
+<script setup lang='ts'>
+import type { Language } from '@/types/language.js';
+
+defineProps<{
+  language: Language
+}>();
+</script>
 
 <style scoped>
 .language-card {

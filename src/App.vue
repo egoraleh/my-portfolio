@@ -1,10 +1,8 @@
-<script setup lang="ts">
-import Header from "@/components/Header.vue";
-</script>
-
 <template>
-  <div id="app">
-    <Header />
-    <RouterView />
-  </div>
+  <SideBar/>
+  <RouterView/>
 </template>
+
+<script setup lang='ts'>
+import SideBar from '@/ui/components/SideBar.vue';
+</script>

@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useHobbies } from "@/composables/useHobbies";
-import HobbyCard from "@/components/HobbyCard.vue";
-
-const { getAllHobbies } = useHobbies();
-const hobbies = getAllHobbies();
-</script>
-
 <template>
   <section class="hobby-section">
     <h1 class="hobby-section__header">Хобби</h1>
@@ -16,6 +8,14 @@ const hobbies = getAllHobbies();
     </ul>
   </section>
 </template>
+
+<script setup lang='ts'>
+import { useHobbies } from '@/composables/useHobbies';
+import HobbyCard from '@/ui/components/cards/HobbyCard.vue';
+
+const { getAllHobbies } = useHobbies();
+const hobbies = getAllHobbies();
+</script>
 
 <style scoped>
 .hobby-section {

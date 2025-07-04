@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import type {Contact} from "@/types/contact";
-
-defineProps<{
-  contact: Contact
-}>();
-</script>
-
 <template>
   <article class="contact-card">
     <h3 class="contact-card__header">{{ contact.title }}</h3>
@@ -22,6 +14,14 @@ defineProps<{
     </figure>
   </article>
 </template>
+
+<script setup lang='ts'>
+import type { Contact } from '@/types/contact.js';
+
+defineProps<{
+  contact: Contact
+}>();
+</script>
 
 <style scoped>
 .contact-card {

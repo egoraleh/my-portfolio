@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import type {Hobby} from "@/types/hobby";
-
-defineProps<{
-  hobby: Hobby
-}>();
-
-</script>
-
 <template>
   <article class="hobby-card">
     <figure class="hobby-card__figure">
@@ -19,6 +10,14 @@ defineProps<{
     </section>
   </article>
 </template>
+
+<script setup lang='ts'>
+import type {Hobby} from '@/types/hobby.js';
+
+defineProps<{
+  hobby: Hobby
+}>();
+</script>
 
 <style scoped>
 .hobby-card {

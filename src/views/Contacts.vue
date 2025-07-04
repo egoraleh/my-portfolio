@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useContacts } from "@/composables/useContacts";
-import ContactCard from "@/components/ContactCard.vue";
-
-const { getAllContacts } = useContacts();
-const contacts = getAllContacts();
-</script>
-
 <template>
   <section class="contact-section">
     <h1 class="contact-section__header">Контакты</h1>
@@ -16,6 +8,14 @@ const contacts = getAllContacts();
     </ul>
   </section>
 </template>
+
+<script setup lang='ts'>
+import { useContacts } from '@/composables/useContacts';
+import ContactCard from '@/ui/components/cards/ContactCard.vue';
+
+const { getAllContacts } = useContacts();
+const contacts = getAllContacts();
+</script>
 
 <style scoped>
 .contact-section {

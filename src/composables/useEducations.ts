@@ -1,5 +1,5 @@
-import educations from "@/data/educations.ts";
-import { Education } from "@/types/education.ts";
+import educations from '@/consts/educations.ts';
+import { Education } from '@/types/education.ts';
 
 export function useEducations() {
     const getAllEducations = (): Education[] => educations.sort((a: Education, b: Education): number => a.id - b.id);
@@ -9,6 +9,6 @@ export function useEducations() {
 
     return {
         getAllEducations,
-        getEducationById
+        getEducationById,
     };
 }

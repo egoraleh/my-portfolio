@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import { Education } from "@/types/education";
-
-defineProps<{
-  education: Education
-}>();
-
-</script>
-
 <template>
   <article class="education-card">
     <figure class="education-card__figure">
@@ -19,6 +10,14 @@ defineProps<{
     </section>
   </article>
 </template>
+
+<script setup lang='ts'>
+import { Education } from '@/types/education.js';
+
+defineProps<{
+  education: Education
+}>();
+</script>
 
 <style scoped>
 .education-card {

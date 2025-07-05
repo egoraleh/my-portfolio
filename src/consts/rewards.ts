@@ -1,4 +1,4 @@
-import { Reward } from '@/types/reward.ts';
+import { Reward } from '@/types/Reward.ts';
 
 const rewards: Reward[] = [
     {

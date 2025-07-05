@@ -29,18 +29,9 @@
 </template>
 
 <script setup lang='ts'>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 
 const expanded = ref(false);
-
-watch(expanded, (val) => {
-  if (val) {
-    document.body.style.marginLeft = '300px';
-    document.body.style.transition = 'margin-left 0.3s ease';
-  } else {
-    document.body.style.marginLeft = '100px';
-  }
-});
 </script>
 
 <style scoped>
@@ -48,7 +39,7 @@ watch(expanded, (val) => {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80px;
+  width: 85px;
   height: 100%;
   background-color: #f0e0c0;
   display: flex;
@@ -64,9 +55,8 @@ watch(expanded, (val) => {
 }
 
 .sidebar.expanded {
-  width: 280px;
-  align-items: flex-start;
-  padding-left: 1rem;
+  width: 250px;
+  align-items: center;
 }
 
 .sidebar__link {
@@ -83,12 +73,13 @@ watch(expanded, (val) => {
 .sidebar__icon {
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
   transition: transform 0.2s, filter 0.2s;
   filter: brightness(0) saturate(100%) invert(20%) sepia(30%) saturate(500%) hue-rotate(10deg);
 }
 
 .sidebar__link:hover .sidebar__icon,
-.sidebar__link:hover .sidebar__text{
+.sidebar__link:hover .sidebar__text {
   transform: scale(1.2);
   filter: brightness(0) saturate(100%) invert(40%) sepia(70%) saturate(800%) hue-rotate(-10deg);
   color: #ff6600;

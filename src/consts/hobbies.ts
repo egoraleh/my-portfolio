@@ -1,4 +1,4 @@
-import { Hobby } from '@/types/hobby.ts';
+import { Hobby } from '@/types/Hobby.ts';
 import chess from '@/assets/images/hobbies/chess.png';
 import basketball from '@/assets/images/hobbies/basketball.png';
 import volleyball from '@/assets/images/hobbies/volleyball.png';

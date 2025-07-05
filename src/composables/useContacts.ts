@@ -1,5 +1,5 @@
 import contacts from '@/consts/contacts.ts';
-import { Contact } from '@/types/contact.ts';
+import { Contact } from '@/types/Contact.ts';
 
 export function useContacts() {
     const getAllContacts = (): Contact[] => contacts.sort((a: Contact, b: Contact): number => a.id - b.id);

@@ -1,5 +1,5 @@
 import hobbies from '@/consts/hobbies.ts';
-import { Hobby } from '@/types/hobby.ts';
+import { Hobby } from '@/types/Hobby.ts';
 
 export function useHobbies() {
     const getAllHobbies = (): Hobby[] => hobbies.sort((a: Hobby, b: Hobby): number => a.id - b.id);

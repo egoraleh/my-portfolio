@@ -1,5 +1,5 @@
 import projects from '@/consts/projects.ts';
-import { Project } from '@/types/project.ts';
+import { Project } from '@/types/Project.ts';
 
 export function useProjects() {
     const getAllProjects = (): Project[] => projects.sort((a: Project, b: Project): number => a.id - b.id);

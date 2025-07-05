@@ -1,43 +1,21 @@
 <template>
-  <article class="hobby-card">
-    <figure class="hobby-card__figure">
-      <img class="hobby-card__image" :src="hobby.imageUrl" :alt="hobby.title">
-    </figure>
+  <figure class="hobby-card__figure">
+    <img class="hobby-card__image" :src="hobby.imageUrl" :alt="hobby.title" />
+  </figure>
 
-    <section class="hobby-card__content">
-      <h3 class="hobby-card__header">{{ hobby.title }}</h3>
-      <p class="hobby-card__description">{{ hobby.description }}</p>
-    </section>
-  </article>
+  <section class="hobby-card__content">
+    <h3 class="hobby-card__header">{{ hobby.title }}</h3>
+    <p class="hobby-card__description">{{ hobby.description }}</p>
+  </section>
 </template>
 
 <script setup lang='ts'>
-import type {Hobby} from '@/types/hobby.js';
+import type { Hobby } from '@/types/Hobby.js';
 
-defineProps<{
-  hobby: Hobby
-}>();
+defineProps<{ hobby: Hobby }>();
 </script>
 
 <style scoped>
-.hobby-card {
-  display: flex;
-  align-items: center;
-  min-height: 250px;
-  background-color: #fdf5e6;
-  border-radius: 16px;
-  border-left: 6px solid #ff9800;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  gap: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hobby-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
 .hobby-card__figure {
   flex-shrink: 0;
   margin: 0;

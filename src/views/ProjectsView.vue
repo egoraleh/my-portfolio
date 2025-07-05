@@ -3,7 +3,9 @@
     <h1 class="project-section__header">Проекты</h1>
     <ul class="project-section__list">
       <li v-for="p in projects" :key="p.id">
-        <ProjectCard :project="p" />
+        <BaseCard customClass="project-card">
+          <ProjectCard :project="p" />
+        </BaseCard>
       </li>
     </ul>
   </section>
@@ -11,6 +13,7 @@
 
 <script setup lang='ts'>
 import { useProjects } from '@/composables/useProjects';
+import BaseCard from '@/ui/base/BaseCard.vue';
 import ProjectCard from '@/ui/components/cards/ProjectCard.vue';
 
 const { getAllProjects } = useProjects();
@@ -36,5 +39,10 @@ const projects = getAllProjects();
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.25rem;
+  margin-right: 50px;
 }
 </style>

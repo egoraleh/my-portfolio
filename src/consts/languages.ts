@@ -1,4 +1,4 @@
-import { Language } from '@/types/language.ts';
+import { Language } from '@/types/Language.ts';
 import russiaFlag from '@/assets/images/flags/russia.jpg';
 import ukFlag from '@/assets/images/flags/UK.jpg';
 import spainFlag from '@/assets/images/flags/spain.jpg';

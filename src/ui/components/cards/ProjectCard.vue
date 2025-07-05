@@ -1,43 +1,24 @@
 <template>
-  <article class="project-card">
-    <h3 class="project-card__header">{{ project.title }}</h3>
-    <p class="project-card__description">{{ project.description }}</p>
-    <a
-        class="project-card__github-link"
-        v-if="project.link"
-        :href="project.link"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-      Смотреть на GitHub
-    </a>
-  </article>
+  <h3 class="project-card__header">{{ project.title }}</h3>
+  <p class="project-card__description">{{ project.description }}</p>
+  <a
+      class="project-card__github-link"
+      v-if="project.link"
+      :href="project.link"
+      target="_blank"
+      rel="noopener noreferrer"
+  >
+    Смотреть на GitHub
+  </a>
 </template>
 
 <script setup lang='ts'>
-import type { Project } from '@/types/project.js';
+import type { Project } from '@/types/Project.js';
 
-defineProps<{
-  project: Project
-}>();
+defineProps<{ project: Project }>();
 </script>
 
 <style scoped>
-.project-card {
-  background-color: #fdf5e6;
-  border-left: 4px solid #ff9800;
-  border-radius: 14px;
-  padding: 1.25rem;
-  margin-right: 50px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
 .project-card__header {
   font-size: 1.6rem;
   font-weight: 600;

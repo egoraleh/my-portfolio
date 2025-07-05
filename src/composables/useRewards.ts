@@ -1,5 +1,5 @@
 import rewards from '@/consts/rewards.ts';
-import { Reward } from '@/types/reward.ts';
+import { Reward } from '@/types/Reward.ts';
 
 export function useRewards() {
     const getAllRewards = (): Reward[] => rewards.sort((a: Reward, b: Reward): number => a.id - b.id);

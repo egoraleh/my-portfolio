@@ -1,4 +1,4 @@
-import { Contact } from '@/types/contact.ts';
+import { Contact } from '@/types/Contact.ts';
 import vkLogo from '@/assets/images/logos/vk.png';
 import telegramLogo from '@/assets/images/logos/telegram.png';
 import githubLogo from '@/assets/images/logos/github.png';

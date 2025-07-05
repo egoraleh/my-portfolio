@@ -13,7 +13,9 @@
       <h2 class="education-section__header">Образование</h2>
       <ul class="education-section__list">
         <li v-for="e in educations" :key="e.id">
-          <EducationCard :education="e" />
+          <BaseCard customClass="education-card">
+            <EducationCard :education="e" />
+          </BaseCard>
         </li>
       </ul>
     </section>
@@ -22,17 +24,19 @@
       <h2 class="language-section__header">Языки</h2>
       <ul class="language-section__list">
         <li v-for="l in languages" :key="l.id">
-          <LanguageCard :language="l" />
+          <BaseCard customClass="language-card">
+            <LanguageCard :language="l" />
+          </BaseCard>
         </li>
       </ul>
     </section>
-
   </section>
 </template>
 
 <script setup lang='ts'>
 import { useLanguages } from '@/composables/useLanguages';
 import { useEducations } from '@/composables/useEducations';
+import BaseCard from '@/ui/base/BaseCard.vue';
 import LanguageCard from '@/ui/components/cards/LanguageCard.vue';
 import EducationCard from '@/ui/components/cards/EducationCard.vue';
 
@@ -93,5 +97,17 @@ const educations = getAllEducations();
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.language-card {
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.education-card {
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 </style>

@@ -3,7 +3,9 @@
     <h1 class="hobby-section__header">Хобби</h1>
     <ul class="hobby-section__list">
       <li v-for="h in hobbies" :key="h.id">
-        <HobbyCard :hobby="h" />
+        <BaseCard customClass="hobby-card">
+          <HobbyCard :hobby="h" />
+        </BaseCard>
       </li>
     </ul>
   </section>
@@ -11,6 +13,7 @@
 
 <script setup lang='ts'>
 import { useHobbies } from '@/composables/useHobbies';
+import BaseCard from '@/ui/base/BaseCard.vue';
 import HobbyCard from '@/ui/components/cards/HobbyCard.vue';
 
 const { getAllHobbies } = useHobbies();
@@ -38,5 +41,14 @@ const hobbies = getAllHobbies();
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.hobby-card {
+  align-items: center;
+  flex-direction: row;
+  min-height: 250px;
+  border-radius: 16px;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 </style>

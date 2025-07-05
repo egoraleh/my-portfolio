@@ -22,12 +22,12 @@ const projects = getAllProjects();
 
 <style scoped>
 .project-section {
-  padding: 2rem 0;
+  margin: 0 auto 20px;
 }
 
 .project-section__header {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   color: #333;
   text-align: center;
 }
@@ -42,7 +42,18 @@ const projects = getAllProjects();
 }
 
 .project-card {
+  gap: 0.5rem;
   padding: 1.25rem;
-  margin-right: 50px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .project-section__header {
+    display: none;
+  }
+
+  .project-section {
+    margin-top: 10px;
+  }
 }
 </style>

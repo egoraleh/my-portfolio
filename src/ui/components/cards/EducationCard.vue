@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang='ts'>
-import { Education } from '@/types/Education.js';
+import { Education } from '@/types/Education';
 
 defineProps<{ education: Education }>();
 </script>
@@ -36,5 +36,22 @@ defineProps<{ education: Education }>();
 .education-card__date {
   font-size: 1.05rem;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .education-card__header {
+    margin: 0;
+  }
+
+  .education-card__figure {
+    width: 100%;
+    margin: 0 auto 0.5rem;
+  }
+
+  .education-card__image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

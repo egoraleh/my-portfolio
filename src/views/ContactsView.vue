@@ -22,14 +22,13 @@ const contacts = getAllContacts();
 
 <style scoped>
 .contact-section {
-  padding: 2rem;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .contact-section__header {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #333;
   text-align: center;
 }
@@ -53,5 +52,15 @@ const contacts = getAllContacts();
 
 .contact-card:hover {
   transform: none;
+}
+
+@media (max-width: 768px) {
+  .contact-section__header {
+    display: none;
+  }
+
+  .contact-section {
+    margin-top: 10px;
+  }
 }
 </style>

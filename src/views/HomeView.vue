@@ -55,6 +55,7 @@ const educations = getAllEducations();
 .info-section__header {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  line-height: 2.5rem;
   color: #333;
 }
 
@@ -75,10 +76,14 @@ const educations = getAllEducations();
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.education-section,
-.language-section {
+.education-section {
   max-width: 900px;
   margin: 0 auto 3rem;
+}
+
+.language-section {
+  max-width: 900px;
+  margin: 0 auto 0;
 }
 
 .education-section__header,
@@ -109,5 +114,21 @@ const educations = getAllEducations();
   flex-direction: row;
   padding: 1rem;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .info-section__header {
+    margin-top: 10px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .language-card {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 </style>

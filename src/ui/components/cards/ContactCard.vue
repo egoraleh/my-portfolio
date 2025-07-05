@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { Contact } from '@/types/Contact.js';
+import type { Contact } from '@/types/Contact';
 
 defineProps<{ contact: Contact }>();
 </script>
@@ -44,5 +44,12 @@ defineProps<{ contact: Contact }>();
 .contact-card__link:hover .contact-card__image {
   transform: scale(1.1);
   filter: grayscale(0%) brightness(100%);
+}
+
+@media (max-width: 768px) {
+  .contact-card__image {
+    transition: none;
+    filter: none;
+  }
 }
 </style>

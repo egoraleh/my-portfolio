@@ -22,14 +22,13 @@ const rewards = getAllRewards();
 
 <style scoped>
 .reward-section {
-  padding: 2rem;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .reward-section__header {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #333;
   text-align: center;
 }
@@ -47,5 +46,19 @@ const rewards = getAllRewards();
   min-height: 160px;
   border-radius: 12px;
   gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .reward-section__header {
+    display: none;
+  }
+
+  .reward-section {
+    margin-top: 10px;
+  }
+
+  .reward-card {
+    min-height: 0;
+  }
 }
 </style>

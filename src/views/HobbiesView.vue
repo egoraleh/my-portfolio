@@ -22,14 +22,13 @@ const hobbies = getAllHobbies();
 
 <style scoped>
 .hobby-section {
-  padding: 2rem;
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto 20px;
 }
 
 .hobby-section__header {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   color: #333;
   text-align: center;
 }
@@ -50,5 +49,20 @@ const hobbies = getAllHobbies();
   border-radius: 16px;
   padding: 1rem;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hobby-section__header {
+    display: none;
+  }
+
+  .hobby-section {
+    margin-top: 10px;
+  }
+
+  .hobby-card {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 </style>

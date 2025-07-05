@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { Hobby } from '@/types/Hobby.js';
+import type { Hobby } from '@/types/Hobby';
 
 defineProps<{ hobby: Hobby }>();
 </script>
@@ -22,16 +22,18 @@ defineProps<{ hobby: Hobby }>();
   position: relative;
 }
 
-.hobby-card__figure::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -0.75rem;
-  width: 2px;
-  height: 100%;
-  background-color: #ff9800;
-  opacity: 0.7;
-  border-radius: 1px;
+@media (width > 768px) {
+  .hobby-card__figure::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.75rem;
+    width: 2px;
+    height: 100%;
+    background-color: #ff9800;
+    opacity: 0.7;
+    border-radius: 1px;
+  }
 }
 
 .hobby-card__image {
@@ -58,5 +60,22 @@ defineProps<{ hobby: Hobby }>();
   color: #555;
   line-height: 1.5;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hobby-card__header {
+    text-align: center;
+  }
+
+  .hobby-card__figure {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hobby-card__image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

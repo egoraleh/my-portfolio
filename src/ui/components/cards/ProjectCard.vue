@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { Project } from '@/types/Project.js';
+import type { Project } from '@/types/Project';
 
 defineProps<{ project: Project }>();
 </script>
@@ -22,6 +22,7 @@ defineProps<{ project: Project }>();
 .project-card__header {
   font-size: 1.6rem;
   font-weight: 600;
+  line-height: 1.3;
   margin: 10px 0 0 0;
   color: #333;
 }
@@ -46,5 +47,21 @@ defineProps<{ project: Project }>();
 .project-card__github-link:hover {
   color: #a05500;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .project-card__header {
+    padding: 0;
+    margin: 0 0 0.5rem;
+  }
+
+  .project-card__github-link {
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  .project-card__description {
+    margin: 0;
+  }
 }
 </style>

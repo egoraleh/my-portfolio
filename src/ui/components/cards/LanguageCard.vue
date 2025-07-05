@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { Language } from '@/types/Language.js';
+import type { Language } from '@/types/Language';
 
 defineProps<{ language: Language }>();
 </script>
@@ -30,13 +30,28 @@ defineProps<{ language: Language }>();
 .language-card__header {
   font-size: 1.5rem;
   color: #333;
-  padding: 0;
   margin: 0.5rem 0 0.5rem 0;
 }
 
 .language-card__level {
   font-size: 1.1rem;
   color: #555;
-  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .language-card__header {
+    margin: 0;
+  }
+
+  .language-card__figure {
+    width: 100%;
+    margin: 0 auto 0.5rem;
+  }
+
+  .language-card__image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

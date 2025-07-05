@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { Reward } from '@/types/Reward.js';
+import type { Reward } from '@/types/Reward';
 
 defineProps<{ reward: Reward }>();
 </script>
@@ -28,5 +28,11 @@ defineProps<{ reward: Reward }>();
   font-size: 1rem;
   color: #777;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .reward-card__header {
+    line-height: 1.6rem;
+  }
 }
 </style>

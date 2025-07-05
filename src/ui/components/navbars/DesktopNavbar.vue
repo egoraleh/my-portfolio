@@ -5,31 +5,22 @@
       @mouseenter="expanded = true"
       @mouseleave="expanded = false"
   >
-    <router-link to="/" class="sidebar__link" title="Главная">
-      <img class="sidebar__icon" src="../../assets/images/icons/info.png" alt="Общая информация">
-      <span class="sidebar__text">Обо мне</span>
-    </router-link>
-    <router-link to="/projects" class="sidebar__link" title="Проекты">
-      <img class="sidebar__icon" src="../../assets/images/icons/projects.png" alt="Проекты">
-      <span class="sidebar__text">Проекты</span>
-    </router-link>
-    <router-link to="/hobbies" class="sidebar__link" title="Хобби">
-      <img class="sidebar__icon" src="../../assets/images/icons/hobbies.png" alt="Хобби">
-      <span class="sidebar__text">Хобби</span>
-    </router-link>
-    <router-link to="/rewards" class="sidebar__link" title="Достижения">
-      <img class="sidebar__icon" src="../../assets/images/icons/rewards.png" alt="Достижения">
-      <span class="sidebar__text">Достижения</span>
-    </router-link>
-    <router-link to="/contacts" class="sidebar__link" title="Контакты">
-      <img class="sidebar__icon" src="../../assets/images/icons/contacts.png" alt="Контакты">
-      <span class="sidebar__text">Контакты</span>
+    <router-link
+        v-for="item in menuItems"
+        :key="item.path"
+        :to="item.path"
+        class="sidebar__link"
+        :title="item.text"
+    >
+      <img class="sidebar__icon" :src="item.icon" :alt="item.text" />
+      <span class="sidebar__text">{{ item.text }}</span>
     </router-link>
   </nav>
 </template>
 
 <script setup lang='ts'>
 import { ref } from 'vue';
+import menuItems from '@/consts/navBarIcons';
 
 const expanded = ref(false);
 </script>

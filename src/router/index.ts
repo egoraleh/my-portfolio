@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-const Projects = import('@/views/ProjectsView.vue');
-const Hobbies = import('@/views/HobbiesView.vue');
-const Rewards = import('@/views/RewardsView.vue');
-const Contacts = import('@/views/ContactsView.vue');
-const Home = import('@/views/HomeView.vue');
+const Projects = () => import('@/views/ProjectsView.vue');
+const Hobbies = () => import('@/views/HobbiesView.vue');
+const Rewards = () => import('@/views/RewardsView.vue');
+const Contacts = () => import('@/views/ContactsView.vue');
+const Home = () => import('@/views/HomeView.vue');
 
 const routes: Array<RouteRecordRaw> = [
     { path: '/', component: Home, meta: { title: 'Обо мне' } },
